@@ -1,0 +1,118 @@
+.footer {
+    background-color: $color-primary-footer;
+    // height: 30rem;
+    padding: 3rem;
+    margin-top: -10rem;
+    z-index: 3;
+    padding: 13rem 7rem;
+
+
+    &-row {
+        display: flex;
+        justify-content: space-between;
+
+
+        @include respond(phone) {
+            display: block;
+        }
+    }
+}
+
+.col {
+    width: 20rem;
+    line-height: 1.3;
+    font-size: 1.3rem;
+
+    &:not(:last-child) {
+        margin-right: 7rem;
+    }
+
+
+    @include respond(phone) {
+        width: 100%;
+        font-size: 3rem;
+
+        &:not(:last-child) {
+            margin: 10rem 0;
+        }
+    }
+
+    a {
+
+        display: block;
+        color: $color-white;
+        text-decoration: none;
+        margin-top: 1rem;
+
+        &:hover {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+}
+
+.col1-text {
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+
+    &::before {
+        content: url(../images/icon-location.svg);
+        position: absolute;
+        left: 6rem;
+    }
+
+    @include respond(phone) {
+        margin-top: 5rem;
+    }
+}
+
+.col2-text {
+    margin-top: 1rem;
+
+    @include respond(tab-port) {
+        display: flex;
+    }
+
+
+    &-1::before {
+        content: url(../images/icon-phone.svg);
+        margin-right: 1rem;
+
+
+    }
+
+    &-2::before {
+        content: url(../images/icon-email.svg);
+        margin-right: 1rem;
+
+    }
+
+}
+
+.col3 {
+    a {
+        display: block;
+    }
+
+}
+
+
+.col4 {
+    a {
+        display: block;
+    }
+
+}
+
+
+.col5 {
+    img{
+       width: 2rem;
+    }
+
+    @include respond(tab-port) {
+        display: flex;
+    }
+
+}

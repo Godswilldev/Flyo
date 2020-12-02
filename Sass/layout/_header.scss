@@ -1,0 +1,46 @@
+.section-header-column{
+    position: relative;
+
+    text-align: center;
+    margin-top: 3rem;
+
+    &__img{
+        img{
+            @include respond(tab-land){
+                width: 70%;
+                overflow: hidden;
+            }
+
+            @include respond(tab-port){
+                width: 60%;
+                overflow: hidden;
+            }
+        }
+    }
+
+    &-description{
+        margin-top: 2rem;
+
+        &__text{
+            font-size: 2rem;
+            padding: 3rem;
+            width: 40%;
+            margin: 0 auto;
+
+            @include respond(tab-land){
+                padding: 3rem 5rem;
+                width: fit-content;
+            }
+
+            @include respond(tab-port){
+                padding: 3rem 8rem;
+                width: fit-content;
+                
+            }
+        }
+    }
+
+    a{
+        text-decoration: none;
+    }
+}

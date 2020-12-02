@@ -1,0 +1,16 @@
+.main {
+
+    padding: 0 10rem;
+    background-image: url(../images/bg-curvy-mobile.svg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    z-index: -1;
+
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width:125em) {
+        background-image: url(../images/bg-curvy-desktop.svg);
+    }
+}

@@ -1,0 +1,44 @@
+.section-nav {
+    // padding: 5rem;
+}
+
+.nav__links {
+    display: flex;
+    justify-content: end;
+    padding: 8rem 6rem 0 6rem;
+
+
+
+
+    &--item {
+        font-size: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 3rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--title {
+            margin-right: auto;
+
+            img {
+                @include respond(phone) {
+                    width: 60%;
+                }
+            }
+        }
+
+        a {
+            color: $color-white;
+            text-decoration: none;
+        }
+
+        &:hover{
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+}
+

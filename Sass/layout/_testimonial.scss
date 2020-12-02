@@ -1,0 +1,112 @@
+.testimonials {
+    margin-top: 15rem;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(tab-port) {
+        display: block;
+
+    }
+
+
+    :not(:last-child) {
+        margin-right: 4rem;
+
+        @include respond(tab-port) {
+            margin-right: 0;
+        }
+
+    }
+
+    :hover {
+        transform: scale(1.05) translateY(-3px) translateX(1px);
+        transition: all .5s ease-out;
+    }
+
+    &::before {
+        content: url(../images/bg-quotes.png);
+        position: relative;
+        left: 4rem;
+        top: -3.5rem;
+        z-index: 1;
+
+    }
+
+    @include respond(tab-port){
+        &::before {
+            content: url(../images/bg-quotes.png);
+            position: relative;
+            left: 0rem;
+            top: 0rem;
+            z-index: 1;
+    
+        }
+    }
+
+
+    &__content {
+        padding: 1rem;
+        background-color: $color-primary-testimonials;
+        border-radius: 5px;
+        box-shadow: 0 1rem 1rem rgba(black, .5);
+        z-index: 10;
+
+        @include respond(tab-port) {
+            padding: 5rem 0;
+            margin-bottom: 8rem;
+        }
+
+
+
+        &--paragraph1 {
+            padding: 0;
+            line-height: 1.5;
+            font-size: 1.5rem;
+            margin: 1rem;
+
+            @include respond(tab-port) {
+                font-size: 2.5rem;
+                padding: 0 2rem;
+            }
+
+        }
+    }
+
+    &__image {
+        width: 5rem;
+        border-radius: 50%;
+        float: left;
+        shape-outside: circle();
+        margin-left: 3.5rem;
+
+
+        &--description--title {
+            margin-top: .5rem;
+            font-size: 1.2rem;
+
+            @include respond(tab-port) {
+                font-size: 2rem;
+                position: relative;
+                left: 3rem;
+            }
+
+
+        }
+
+        &--description--rank {
+            font-size: 1.1rem;
+
+            @include respond(tab-port) {
+                font-size: 1.4rem;
+                padding: .5rem;
+                position: relative;
+                left: 3rem;
+            }
+
+        }
+    }
+}
